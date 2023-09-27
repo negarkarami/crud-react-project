@@ -1,5 +1,6 @@
 import {Link, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+import DeletePost from "../../component/Delete";
 
 const ShowPosts = () => {
     const [post, setPost] = useState(null);
@@ -42,7 +43,7 @@ const ShowPosts = () => {
                             </div>
                             <div className="card-foote ">
                                     <Link className=' btn btn-sm btn-dark me-3' to={`/posts/edit/${postId}`}>Edit</Link>
-                                    <Link className='btn btn-sm btn-primary' to={'/posts/'}>Delete</Link>
+                                    <DeletePost postId={post.id}/>
                             </div>
                         </div>
                     </div>
